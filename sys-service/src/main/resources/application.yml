@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: sys
+
+  datasource:
+    username: root
+    password: 1q@W#E4r
+    url: jdbc:mysql://123.56.141.39:3306/bbq
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://admin:admin@localhost:8761/eureka"
+
+mybatis:
+  mapper-locations: classpath:sysservice/sysservice/mapper/*.xml
+
+
+

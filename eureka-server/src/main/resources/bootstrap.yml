@@ -1,0 +1,27 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+  #安全认证
+  security:
+    basic:
+      enabled: true    #是否启用eureka认证
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  instance:
+    #实例主机名
+    hostname: localhost
+  client:
+    #不向Eureka注册自己
+    register-with-eureka: false
+    #不检查其他的EurekaServer节点
+    fetch-registry: false
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 600000

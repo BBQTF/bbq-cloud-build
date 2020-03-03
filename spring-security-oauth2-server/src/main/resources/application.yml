@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: oauth2-server
+  redis:
+    host: localhost
+
+server:
+  port: 8769
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://admin:admin@localhost:8761/eureka"
+
+# log
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: Debug
+    org.springframework.boot.autoconfigure: INFO

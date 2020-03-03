@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启通过服务名(serviceID)访问 必须大写 该方式与下方的配置"routes"可以并存
+          lower-case-service-id: true # 解决上面通过服务名访问必须大写的问题，可以小写
+
+
+server:
+  port: 8770
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://admin:admin@localhost:8761/eureka"
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
